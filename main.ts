@@ -4,15 +4,13 @@
  * Servo Mode: PWM 500~2500μs, Center 1500μs, range 360°±10°
  * Motor Mode: Forward 3000~4000μs, Stop 4000μs, Reverse 4000~5000μs
  */
-//% color=#e05050 icon="\uf085" block="GeekServo 5KG" blockId="geekServo"
+//% color=#1197c0 icon="\uf085" block="GeekServo 5KG" blockId="geekServo"
 namespace geekServo {
 
     /**
-     * GVS pin list available on micro:bit (P0 excluded - used by buzzer on WuKong)
+     * GVS pin list available on micro:bit
      */
     export enum GVSPin {
-        //% block="P0"
-        P0 = AnalogPin.P0,
         //% block="P1"
         P1 = AnalogPin.P1,
         //% block="P2"
