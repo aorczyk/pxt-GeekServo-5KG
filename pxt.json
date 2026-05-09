@@ -1,0 +1,24 @@
+{
+    "name": "geekServo",
+    "version": "1.0.0",
+    "description": "MakeCode extension for GeekServo 5KG servo and motor control",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "targetVersions": {
+        "target": "4.0.18",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ]
+}
