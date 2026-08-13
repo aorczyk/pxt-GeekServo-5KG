@@ -6,7 +6,7 @@ MakeCode extension for micro:bit to control the **GeekServo 5KG** in Servo Mode 
 
 - Control servo position across a full **360° range**
 - Drive the servo as a **continuous rotation motor** with variable speed
-- Supports common GVS pins: P0, P1, P2, P8, P12–P15
+- Supports GVS pins: P1, P2, P8, P12–P15
 
 ## Blocks
 
@@ -22,23 +22,33 @@ geekServo.setAngle(geekServo.GVSPin.P1, 180)
 
 ### Set motor speed (Motor Mode)
 
+Controls the GeekServo as a continuous rotation motor. Speed: **-100% to 100%**, where 0 = stop.
+
+PWM range: 500–2500 µs, Stop: 1500 µs
+
+```blocks
+geekServo.geekServoSetMotorSpeed(geekServo.GVSPin.P1, 50)
+```
+
+### Set 5KG motor speed (Motor 5KG Mode)
+
 Controls the GeekServo 5KG as a continuous rotation motor. Speed: **-100% to 100%**, where 0 = stop.
 
 PWM range: 3000–5000 µs, Stop: 4000 µs
 
 ```blocks
-geekServo.setMotorSpeed(geekServo.GVSPin.P1, 50)
+geekServo.geekServo5KgSetMotorSpeed(geekServo.GVSPin.P1, 50)
 ```
 
 > **Note:** Connect the signal wire to a GVS pin (P1, P2, P8, P12–P15), **not** to S0–S7 servo ports on the WuKong board.
-> Avoid P0 when using the WuKong board (P0 is used by the onboard buzzer).
 
 ## PWM Reference
 
 | Mode | Min | Center / Stop | Max |
 |------|-----|---------------|-----|
 | Servo (angle) | 500 µs (0°) | 1500 µs (180°) | 2500 µs (360°) |
-| Motor (speed) | 3000 µs (+100%) | 4000 µs (stop) | 5000 µs (−100%) |
+| Motor (speed) | 500 µs (+100%) | 1500 µs (stop) | 2500 µs (−100%) |
+| Motor 5KG (speed) | 3000 µs (+100%) | 4000 µs (stop) | 5000 µs (−100%) |
 
 ## Example
 
@@ -47,7 +57,7 @@ geekServo.setMotorSpeed(geekServo.GVSPin.P1, 50)
 geekServo.setAngle(geekServo.GVSPin.P1, 90)
 
 // Drive motor forward at 75% speed on pin P2
-geekServo.setMotorSpeed(geekServo.GVSPin.P2, 75)
+geekServo.geekServoSetMotorSpeed(geekServo.GVSPin.P2, 75)
 ```
 
 ## Adding to MakeCode
