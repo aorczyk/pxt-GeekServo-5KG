@@ -53,10 +53,10 @@ namespace geekServo {
      * @param speed Speed from -100% (full reverse) to 100% (full forward), 0 = stop
      */
     //% weight=90
-    //% blockId=geekServoSetMotorSpeed block="Set GeekServo motor on pin %pin speed to %speed\\%"
+    //% blockId=setMotorSpeed block="Set GeekServo motor on pin %pin speed to %speed\\%"
     //% speed.min=-100 speed.max=100
     //% speed.defl=0
-    export function geekServoSetMotorSpeed(pin: GVSPin, speed: number): void {
+    export function setMotorSpeed(pin: GVSPin, speed: number): void {
         // Motor Mode: +100% → 500μs (full forward), 0% → 1500μs (stop), -100% → 2500μs (full reverse)
         speed = Math.clamp(-100, 100, speed)
         let pulseUs = Math.map(speed, -100, 100, 2500, 500)
@@ -71,10 +71,10 @@ namespace geekServo {
      * @param speed Speed from -100% (full reverse) to 100% (full forward), 0 = stop
      */
     //% weight=80
-    //% blockId=geekServo5KgSetMotorSpeed block="Set GeekServo 5KG motor on pin %pin speed to %speed\\%"
+    //% blockId=set5KgMotorSpeed block="Set GeekServo 5KG motor on pin %pin speed to %speed\\%"
     //% speed.min=-100 speed.max=100
     //% speed.defl=0
-    export function geekServo5KgSetMotorSpeed(pin: GVSPin, speed: number): void {
+    export function set5KgMotorSpeed(pin: GVSPin, speed: number): void {
         // Motor Mode: +100% → 3000μs (full forward), 0% → 4000μs (stop), -100% → 5000μs (full reverse)
         speed = Math.clamp(-100, 100, speed)
         let pulseUs = Math.map(speed, -100, 100, 5000, 3000)

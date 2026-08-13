@@ -27,7 +27,7 @@ Controls the GeekServo as a continuous rotation motor. Speed: **-100% to 100%**,
 PWM range: 500–2500 µs, Stop: 1500 µs
 
 ```blocks
-geekServo.geekServoSetMotorSpeed(geekServo.GVSPin.P1, 50)
+geekServo.setMotorSpeed(geekServo.GVSPin.P1, 50)
 ```
 
 ### Set 5KG motor speed (Motor 5KG Mode)
@@ -37,7 +37,7 @@ Controls the GeekServo 5KG as a continuous rotation motor. Speed: **-100% to 100
 PWM range: 3000–5000 µs, Stop: 4000 µs
 
 ```blocks
-geekServo.geekServo5KgSetMotorSpeed(geekServo.GVSPin.P1, 50)
+geekServo.set5KgMotorSpeed(geekServo.GVSPin.P1, 50)
 ```
 
 > **Note:** Connect the signal wire to a GVS pin (P1, P2, P8, P12–P15), **not** to S0–S7 servo ports on the WuKong board.
@@ -57,7 +57,7 @@ geekServo.geekServo5KgSetMotorSpeed(geekServo.GVSPin.P1, 50)
 geekServo.setAngle(geekServo.GVSPin.P1, 90)
 
 // Drive motor forward at 75% speed on pin P2
-geekServo.geekServoSetMotorSpeed(geekServo.GVSPin.P2, 75)
+geekServo.setMotorSpeed(geekServo.GVSPin.P2, 75)
 ```
 
 ## Adding to MakeCode
