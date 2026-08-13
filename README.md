@@ -27,7 +27,7 @@ Controls the GeekServo as a continuous rotation motor. Speed: **-100% to 100%**,
 PWM range: 500–2500 µs, Stop: 1500 µs
 
 ```blocks
-geekServo.setMotorSpeed(geekServo.GVSPin.P1, 50)
+geekServo.set2KgMotorSpeed(geekServo.GVSPin.P1, 50)
 ```
 
 ### Set 5KG motor speed (Motor 5KG Mode)
@@ -57,7 +57,7 @@ geekServo.set5KgMotorSpeed(geekServo.GVSPin.P1, 50)
 geekServo.setAngle(geekServo.GVSPin.P1, 90)
 
 // Drive motor forward at 75% speed on pin P2
-geekServo.setMotorSpeed(geekServo.GVSPin.P2, 75)
+geekServo.set2KgMotorSpeed(geekServo.GVSPin.P2, 75)
 ```
 
 ## Adding to MakeCode
