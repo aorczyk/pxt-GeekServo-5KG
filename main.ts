@@ -53,7 +53,7 @@ namespace geekServo {
      * @param speed Speed from -100% (full reverse) to 100% (full forward), 0 = stop
      */
     //% weight=90
-    //% blockId=geekServoSet2KgMotorSpeed block="Set GeekServo motor on pin %pin speed to %speed\\%"
+    //% blockId=geekServoSet2KgMotorSpeed block="Set GeekServo 2KG motor on pin %pin speed to %speed\\%"
     //% speed.min=-100 speed.max=100
     //% speed.defl=0
     export function set2KgMotorSpeed(pin: GVSPin, speed: number): void {
