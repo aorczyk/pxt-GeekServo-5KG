@@ -1,6 +1,6 @@
 ﻿# pxt-geekservo
 
-MakeCode extension for micro:bit to control the **GeekServo 5KG** in Servo Mode and Motor Mode.
+MakeCode extension for micro:bit to control the **GeekServo** 2KG and 5KG in Servo Mode and Motor Mode.
 
 ## Features
 
@@ -12,7 +12,7 @@ MakeCode extension for micro:bit to control the **GeekServo 5KG** in Servo Mode 
 
 ### Set angle (Servo Mode)
 
-Sets the angular position of the GeekServo 5KG. Range: **0° to 360°**.
+Sets the angular position of the GeekServo 2KG or 5KG. Range: **0° to 360°**.
 
 PWM range: 500–2500 µs, Center: 1500 µs = 180°
 
@@ -20,9 +20,9 @@ PWM range: 500–2500 µs, Center: 1500 µs = 180°
 geekServo.setAngle(geekServo.GVSPin.P1, 180)
 ```
 
-### Set motor speed (Motor Mode)
+### Set 2KG motor speed (Motor Mode)
 
-Controls the GeekServo as a continuous rotation motor. Speed: **-100% to 100%**, where 0 = stop.
+Controls the GeekServo 2KG continuous rotation motor. Speed: **-100% to 100%**, where 0 = stop.
 
 PWM range: 500–2500 µs, Stop: 1500 µs
 
@@ -30,7 +30,7 @@ PWM range: 500–2500 µs, Stop: 1500 µs
 geekServo.set2KgMotorSpeed(geekServo.GVSPin.P1, 50)
 ```
 
-### Set 5KG motor speed (Motor 5KG Mode)
+### Set 5KG motor speed (Motor Mode)
 
 Controls the GeekServo 5KG as a continuous rotation motor. Speed: **-100% to 100%**, where 0 = stop.
 
